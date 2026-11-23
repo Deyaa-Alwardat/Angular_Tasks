@@ -1,0 +1,72 @@
+
+<div class="store-container">
+
+  <!-- Store Status -->
+  <p class="store-status">
+    {{ isStoreOpen ? 'We Are Open' : 'We Are Closed' }}
+  </p>
+
+  <!-- Featured Product -->
+  <h2>Featured Product</h2>
+
+  <div class="featured-product">
+    <h3>{{ featuredProduct.name }}</h3>
+
+    <p>{{ featuredProduct.description }}</p>
+
+    <p>
+      ${{ featuredProduct.price }}
+
+      <span class="price">
+        ${{ getDiscountedPrice(featuredProduct.price, discountPercentage) }}
+      </span>
+
+      <span class="price">
+        {{ discountPercentage }}% Discount
+      </span>
+    </p>
+  </div>
+
+  <!-- Our Products -->
+  <h2>Our Products</h2>
+
+  <table>
+    <tr>
+      <th>{{ productNames[1] }}</th>
+      <th>{{ productNames[2] }}</th>
+      <th>{{ productNames[3] }}</th>
+      <th>{{ productNames[4] }}</th>
+    </tr>
+
+    <tr>
+      <td class="price">${{ productPrices[1] }}</td>
+      <td class="price">${{ productPrices[2] }}</td>
+      <td class="price">${{ productPrices[3] }}</td>
+      <td class="price">${{ productPrices[4] }}</td>
+    </tr>
+  </table>
+
+  <!-- Store Summary -->
+  <h2>Store Summary</h2>
+
+  <table class="summary-table">
+    <tr>
+      <td class="price">{{ getTotalProducts() }}</td>
+      <td class="price">${{ getMaxPrice() }}</td>
+      <td class="price">${{ getMinPrice() }}</td>
+      <td class="price">${{ getTotalPrice() }}</td>
+    </tr>
+
+    <tr>
+      <td>Total Products</td>
+      <td>Highest Price</td>
+      <td>Lowest Price</td>
+      <td>Total Products Value</td>
+    </tr>
+  </table>
+
+  <p style="text-align: center; color: #9baec9; font-style: italic; margin-top: 45px;">
+    Illustrative layout – students should implement it using the topics covered.
+  </p>
+
+</div>

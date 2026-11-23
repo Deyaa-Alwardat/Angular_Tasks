@@ -1,0 +1,78 @@
+
+/* Main Container */
+.store-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 15px;
+  background-color: #292c2f;
+  border: 1px solid orangered;
+  color: #d5dce8;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h2 {
+  font-size: 18px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+  color: #d5dce8;
+}
+
+/* Paragraphs */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Tables */
+table {
+  width: 95%;
+  margin: 15px auto 30px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #505761;
+  padding: 10px;
+}
+
+th {
+  background-color: #292c2f;
+  color: #d5dce8;
+}
+
+td {
+  background-color: #292c2f;
+}
+
+/* Prices */
+.price {
+  color: orangered;
+  font-weight: bold;
+}
+
+/* Store Status */
+.store-status {
+  text-align: center;
+  color: #16b34f;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Featured Product */
+.featured-product {
+  background-color: #382d1d;
+  padding: 12px;
+}
+
+/* Summary */
+.summary-table td {
+  background-color: #d5deef;
+  color: #222;
+}
+
+.summary-table .price {
+  color: #d35400;
+  font-weight: bold;
+}
