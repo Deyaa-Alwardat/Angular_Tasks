@@ -1,0 +1,28 @@
+.product-details {
+  width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.product-details h2 {
+  color: #1f3d78;
+}
+
+.product-details img {
+  width: 200px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.product-details h3 {
+  color: #1f3d78;
+}
+
+.product-details p {
+  font-size: 16px;
+  margin: 10px;
+}

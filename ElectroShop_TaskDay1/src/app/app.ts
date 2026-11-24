@@ -45,7 +45,7 @@ constructor() {
     this.isStoreOpen = true;
   } else {
     this.isStoreOpen = false;
-  }
+  }   
 }
  discountPercentage: number = 10;
 getDiscountedPrice(price: number, discount: number): number {

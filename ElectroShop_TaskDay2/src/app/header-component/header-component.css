@@ -1,0 +1,14 @@
+.store-header {
+  background-color: #1f3d78;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.store-header h1 {
+  font-size: 32px;
+}
+
+.store-header p {
+  font-size: 18px;
+}

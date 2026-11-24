@@ -1,0 +1,16 @@
+.store-footer {
+  background-color: #1f3d78;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.store-footer h3 {
+  font-size: 22px;
+}
+
+.store-footer p {
+  margin: 10px;
+  font-size: 15px;
+}
