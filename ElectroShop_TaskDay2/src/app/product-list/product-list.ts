@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductDetailsComponent } from '../product-details-component/product-details-component';
 
 // Interface
 interface Product {
@@ -11,7 +12,7 @@ interface Product {
 
 @Component({
   selector: 'app-product-list',
-  imports: [],
+  imports: [ProductDetailsComponent],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
 })
@@ -23,7 +24,7 @@ export class ProductList {
     {
       name: 'Laptop',
       description: 'High-performance laptop',
-      price: 750,
+      price: 850,
       image: 'assets/laptop.jpg',
       isAvailable: true
     },
@@ -60,5 +61,6 @@ export class ProductList {
   buyNow(productName: string): void {
     alert('You selected ' + productName);
   }
+  
 
 }

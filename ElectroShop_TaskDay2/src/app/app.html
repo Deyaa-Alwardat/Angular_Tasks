@@ -3,5 +3,17 @@
 <h1>Welcome to ElectroShop</h1>
 
 <app-product-list></app-product-list>
-<app-product-details-component></app-product-details-component>
+
+
+<app-product-details-component
+    [productName]="productName()"
+    [productDescription]="productDescription()"
+    [productPrice]="productPrice()"
+    [isAvailable]="productAvailability()"
+    (addToCart)="onAddToCart($event)">
+</app-product-details-component>
+
+<app-shopping-cart-component
+  [cartData]="cartItem">
+</app-shopping-cart-component>
 <app-footer-component></app-footer-component>

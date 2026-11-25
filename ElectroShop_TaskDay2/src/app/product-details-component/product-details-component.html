@@ -5,6 +5,7 @@
   <img
     [src]="productImage"
     [alt]="productName"
+    width="200"
   >
 
   <h3>{{ productName }}</h3>
@@ -13,10 +14,21 @@
 
   <p>Price: ${{ productPrice }}</p>
 
-  <p>Quantity: {{ quantity }}</p>
-
   <p>Discount: {{ discountPercentage }}%</p>
 
-  <p>Available: {{ isAvailable }}</p>
+  <p>Status: {{ checkAvailability() }}</p>
 
+ <hr>
+
+  <h3>Quantity: {{ quantity() }}</h3>
+
+  <button (click)="decreaseQuantity()">-</button>
+
+  <button (click)="increaseQuantity()">+</button>
+
+  <br><br>
+
+  <button (click)="addProductToCart()">
+  Add to Cart
+</button>
 </div>
