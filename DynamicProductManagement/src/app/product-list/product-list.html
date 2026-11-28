@@ -1,0 +1,110 @@
+
+<div class="container mt-4">
+  <div class="row g-3">
+
+    @for (product of products; track product.id) {
+      <div class="col-md-4">
+
+        <div class="card h-100"
+          [ngClass]="{
+            'discount-card': product.discount > 0,
+            'available-card': product.isAvailable,
+            'unavailable-card': !product.isAvailable,
+            'premium-card': product.price > 500
+          }"
+          [ngStyle]="{
+            'opacity': product.isAvailable ? '1' : '0.5'
+          }">
+
+          <img [src]="product.image" class="card-img-top" alt="Product">
+
+          <div class="card-body">
+
+            <h5 class="card-title">{{ product.name }}</h5>
+
+            <p class="card-text"
+              [ngStyle]="{
+                'color': product.discount > 0 ? 'red' : 'black',
+                'font-size': product.price > 500 ? '24px' : '16px'
+              }">
+              Price: {{ product.price }} JD
+            </p>
+
+            <p class="card-text">
+              Category: {{ product.category }}
+            </p>
+
+            @if (product.isAvailable) {
+              <p class="text-success">Available</p>
+            } @else {
+              <p class="text-danger">Out of Stock</p>
+            }
+
+            @if (product.discount > 0) {
+              <p class="text-success">Special Offer</p>
+            } @else {
+              <p class="text-muted">No Discount</p>
+            }
+
+            @if (product.price > 500) {
+              <p class="text-warning fw-bold">Premium Product</p>
+            }
+
+            @if (product.isAvailable) {
+              <button class="btn btn-primary">Buy Now</button>
+            }
+
+          </div>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+
+<!-- Order Status Section -->
+<div class="container mt-4">
+  <h3>Order Status</h3>
+
+  @switch (orderStatus) {
+
+    @case ('Pending') {
+      <p>Your order is waiting for confirmation.</p>
+    }
+
+    @case ('Processing') {
+      <p>Your order is being prepared.</p>
+    }
+
+    @case ('Shipped') {
+      <p>Your order has been shipped.</p>
+    }
+
+    @case ('Delivered') {
+      <p>Your order has been delivered.</p>
+    }
+
+    @default {
+      <p>Unknown Order Status</p>
+    }
+
+  }
+</div>
+
+<!-- Product Categories Section -->
+<div class="container mt-4">
+  <h3>Product Categories</h3>
+
+  @if (selectedCategory === 'All Products') {
+    <p>Showing all products.</p>
+  }
+
+  @if (selectedCategory === 'Electronics') {
+    <p>Showing electronics products.</p>
+  }
+
+  @if (selectedCategory === 'Accessories') {
+    <p>Showing accessories products.</p>
+  }
+
+</div>
